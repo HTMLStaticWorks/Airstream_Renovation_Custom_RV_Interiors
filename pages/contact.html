@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Airstream Renovation & Custom RV Interiors</title>
+  <meta name="description" content="Get in touch with our renovation team. Book a free consultation, request a quote, or ask any question about your RV renovation project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <style>
+    .tabs { display:flex; gap:4px; background:var(--bg-secondary); padding:4px; border-radius:var(--border-radius); margin-bottom:var(--space-4); }
+    .tab-btn { flex:1; padding:10px; border:none; background:transparent; font-family:var(--font-heading); font-size:0.875rem; font-weight:500; color:var(--text-secondary); border-radius:6px; cursor:pointer; transition:var(--transition); }
+    .tab-btn.active { background:var(--bg-card); color:var(--color-accent); box-shadow:var(--shadow-sm); font-weight:600; }
+    .tab-panel { display:none; }
+    .tab-panel.active { display:block; }
+  </style>
+</head>
+<body>
+
+<header id="header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo" aria-label="Airstream RV Home">
+        <div class="logo-icon" aria-hidden="true"><i class="ri-roadster-line"></i></div>
+        <div class="logo-text">
+          <span class="brand-name">Airstream RV</span>
+          <span class="brand-sub">Custom Interiors</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <i class="ri-arrow-down-s-line"></i></a>
+          <div class="dropdown" role="menu">
+            <a href="services.html#renovation" role="menuitem">Full Renovation</a>
+            <a href="services.html#interior" role="menuitem">Custom Interiors</a>
+            <a href="services.html#flooring" role="menuitem">Floor Plans</a>
+            <a href="services.html#materials" role="menuitem">Material Sourcing</a>
+          </div>
+        </div>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Controls -->
+      <div class="header-controls">
+        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+        <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link active">Contact</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="login.html" class="btn btn-primary btn-sm" style="margin: var(--space-4) var(--space-6); text-align: center;">Login</a>
+  <div class="mobile-controls">
+    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+    <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-bg" style="background-image: url('https://www.yankodesign.com/images/design_news/2023/09/new-airstream-trade-wind-is-customized-to-go-further-and-stay-longer-all-while-rejoicing-the-comfort-of-your-home/Airstream-trade-wind-off-grid-travel-trailer-13.jpg')" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" role="text">
+          <i class="ri-customer-service-2-fill" aria-hidden="true"></i>
+          Get in Touch
+        </div>
+        <h1>Let's Talk About <span>Your Build</span></h1>
+        <p>Book a free consultation, request a quote, or just say hello. We respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Info Cards + Map -->
+        <div class="contact-info">
+          <div class="contact-card animate-on-scroll">
+            <i class="ri-phone-line"></i>
+            <h4>Call Us</h4>
+            <p style="font-size:0.875rem;margin:0">Mon–Fri 8am–6pm CST</p>
+            <a href="tel:+18007837326" style="color:var(--color-accent);font-weight:600;margin-top:4px;display:block">1-800-RV-DREAM</a>
+          </div>
+          <div class="contact-card animate-on-scroll animate-delay-1">
+            <i class="ri-mail-send-line"></i>
+            <h4>Email Us</h4>
+            <p style="font-size:0.875rem;margin:0">We reply within 24 hours</p>
+            <a href="mailto:hello@airstreamrv.com" style="color:var(--color-accent);font-weight:600;margin-top:4px;display:block">hello@airstreamrv.com</a>
+          </div>
+          <div class="contact-card animate-on-scroll animate-delay-2">
+            <i class="ri-map-pin-2-line"></i>
+            <h4>Visit Our Workshop</h4>
+            <p style="font-size:0.875rem;margin:0">123 Renovation Way<br>Austin, TX 78701</p>
+          </div>
+
+          <!-- Working Google Map -->
+          <div class="map-container animate-on-scroll animate-delay-3" style="width:100%; height:300px; border-radius:var(--border-radius-lg); overflow:hidden; border:1px solid var(--border-color); margin-bottom:var(--space-3);">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.697457723469!2d-97.74567222384665!3d30.26715297481232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5a33f5d4b9d%3A0x9473441993427977!2sAustin%2C%20TX%2078701!5e0!3m2!1sen!2sus!4v1715061234567!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Social Links -->
+          <div class="contact-card animate-on-scroll">
+            <h4 style="margin-bottom:var(--space-2)">Follow Our Builds</h4>
+            <div class="footer-social" style="justify-content:center">
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+              <a href="#" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+              <a href="#" class="social-btn" aria-label="Apple"><i class="ri-apple-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Tabbed Forms -->
+        <div class="contact-form-card animate-on-scroll animate-delay-2">
+          <div class="tabs" role="tablist" aria-label="Contact options">
+            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="contact">Send a Message</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="booking">Book Consultation</button>
+            <button class="tab-btn" role="tab" aria-selected="false" data-tab="quote">Get a Quote</button>
+          </div>
+
+          <!-- Contact Form -->
+          <!-- Formspree / Netlify compatible: add action="https://formspree.io/f/YOUR_ID" -->
+          <div class="tab-panel active" id="tab-contact" role="tabpanel">
+            <h3 style="margin-bottom:var(--space-3)">Send Us a Message</h3>
+            <form id="contact-form" data-validate novalidate action="#" method="POST">
+              <!-- Formspree hidden input: <input type="hidden" name="_subject" value="New RV Renovation Inquiry"> -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2)">
+                <div class="form-group">
+                  <label for="first-name">First Name <span style="color:#e74c3c">*</span></label>
+                  <input type="text" id="first-name" name="first_name" class="form-control" placeholder="John" data-rules="required" required aria-required="true" />
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name <span style="color:#e74c3c">*</span></label>
+                  <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Smith" data-rules="required" required aria-required="true" />
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span style="color:#e74c3c">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" data-rules="required,email" required aria-required="true" />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service" class="form-control" aria-label="Select service">
+                  <option value="">Select a service...</option>
+                  <option>Full Airstream Renovation</option>
+                  <option>Custom Interior Design</option>
+                  <option>Floor Plan Design</option>
+                  <option>Material Sourcing</option>
+                  <option>Solar & Electrical</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span style="color:#e74c3c">*</span></label>
+                <textarea id="message" name="message" class="form-control" placeholder="Tell us about your RV and what you'd like to achieve..." data-rules="required" required aria-required="true"></textarea>
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <!-- File Upload -->
+              <div class="form-group">
+                <label>Attach Photos (optional)</label>
+                <div class="file-upload" role="button" tabindex="0" aria-label="Upload photos of your RV">
+                  <i class="ri-upload-cloud-2-line" style="font-size:2rem;color:var(--color-accent);display:block;margin-bottom:8px"></i>
+                  <p class="file-label" style="margin:0;font-weight:600;font-size:0.9rem">Drop photos here or click to browse</p>
+                  <p style="font-size:0.75rem;color:var(--text-light);margin:4px 0 0">JPG, PNG, PDF up to 10MB each</p>
+                  <input type="file" style="display:none" accept="image/*,.pdf" multiple aria-hidden="true" />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" style="margin-top:var(--space-2)">
+                <i class="ri-send-plane-2-line"></i> Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Booking Form -->
+          <div class="tab-panel" id="tab-booking" role="tabpanel">
+            <h3 style="margin-bottom:var(--space-1)">Book a Free Consultation</h3>
+            <p style="font-size:0.875rem;margin-bottom:var(--space-3)">60 minutes with our design team — in person or virtual. No commitment required.</p>
+            <!-- Calendar booking integration placeholder -->
+            <div style="background:var(--bg-secondary);border:2px dashed var(--border-color);border-radius:var(--border-radius-lg);padding:var(--space-4);text-align:center;margin-bottom:var(--space-3)">
+              <i class="ri-calendar-schedule-line" style="font-size:2.5rem;color:var(--color-accent);display:block;margin-bottom:8px"></i>
+              <p style="font-weight:600;font-size:0.9rem;margin-bottom:4px">Calendar Booking Widget</p>
+              <p style="font-size:0.8rem;color:var(--text-light)">Connect Calendly, Cal.com, or your own booking system here</p>
+            </div>
+            <form id="booking-form" data-validate novalidate>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2)">
+                <div class="form-group">
+                  <label for="b-name">Full Name <span style="color:#e74c3c">*</span></label>
+                  <input type="text" id="b-name" class="form-control" placeholder="Jane Smith" data-rules="required" required />
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="b-email">Email <span style="color:#e74c3c">*</span></label>
+                  <input type="email" id="b-email" class="form-control" placeholder="jane@email.com" data-rules="required,email" required />
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="b-date">Preferred Date</label>
+                <input type="date" id="b-date" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="b-type">Consultation Type</label>
+                <select id="b-type" class="form-control">
+                  <option>In-Person (Austin, TX)</option>
+                  <option>Video Call (Zoom)</option>
+                  <option>Phone Call</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b-rv">Your RV Details</label>
+                <input type="text" id="b-rv" class="form-control" placeholder="e.g. 1972 Airstream Sovereign 28ft" />
+              </div>
+              <button type="submit" class="btn btn-primary btn-full"><i class="ri-calendar-check-line"></i> Confirm Booking</button>
+            </form>
+          </div>
+
+          <!-- Quote Form -->
+          <div class="tab-panel" id="tab-quote" role="tabpanel">
+            <h3 style="margin-bottom:var(--space-3)">Request a Detailed Quote</h3>
+            <form data-validate novalidate>
+              <div class="form-group">
+                <label for="q-name">Full Name <span style="color:#e74c3c">*</span></label>
+                <input type="text" id="q-name" class="form-control" placeholder="Your name" data-rules="required" required />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="q-email">Email <span style="color:#e74c3c">*</span></label>
+                <input type="email" id="q-email" class="form-control" placeholder="your@email.com" data-rules="required,email" required />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="q-rv">RV Make, Model & Year <span style="color:#e74c3c">*</span></label>
+                <input type="text" id="q-rv" class="form-control" placeholder="e.g. 2005 Airstream International 25ft" data-rules="required" required />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="q-budget">Approximate Budget</label>
+                <select id="q-budget" class="form-control">
+                  <option>Under $10,000</option>
+                  <option>$10,000 – $25,000</option>
+                  <option>$25,000 – $50,000</option>
+                  <option>$50,000 – $100,000</option>
+                  <option>$100,000+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="q-scope">Project Scope</label>
+                <textarea id="q-scope" class="form-control" placeholder="Describe what you want to renovate or change..." style="min-height:100px"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Upload Current Photos</label>
+                <div class="file-upload" role="button" tabindex="0">
+                  <i class="ri-image-add-line" style="font-size:1.8rem;color:var(--color-accent);display:block;margin-bottom:6px"></i>
+                  <p class="file-label" style="margin:0;font-size:0.875rem;font-weight:600">Click to upload photos</p>
+                  <input type="file" style="display:none" accept="image/*" multiple aria-hidden="true" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full"><i class="ri-price-tag-3-line"></i> Request Quote</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ strip -->
+  <section class="section bg-secondary" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="label">Quick Answers</span>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="accordion animate-on-scroll" style="max-width:800px;margin:0 auto">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>How long does a full renovation take?</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Most full Airstream renovations take 8–16 weeks depending on the complexity and scope. We provide a detailed project timeline during your initial consultation so you know exactly what to expect.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Do I need to bring my RV to you?</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Yes, all renovation work is performed at our specialized workshop in Austin, TX. If you are unable to deliver the RV yourself, we can help coordinate professional transport services to bring it to us safely.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>What's included in the free consultation?</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Our free 60-minute consultation includes a thorough review of your RV's current state, a discussion of your lifestyle needs, exploration of design possibilities, and a high-level ballpark estimate for your project.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false">
+            <span>Do you offer payment plans?</span>
+            <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div class="accordion-content">
+            <p>Absolutely. We use a milestone-based payment structure: a 30% deposit to secure your spot, 40% when the build is midway through, and the final 30% upon completion and delivery. We also partner with financing providers to help fund your dream build.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="header-logo" style="margin-bottom:var(--space-2)">
+          <div class="logo-icon" aria-hidden="true"><i class="ri-roadster-line"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">Airstream RV</span>
+            <span class="brand-sub">Custom Interiors</span>
+          </div>
+        </a>
+        <p>Premium Airstream renovation and custom RV interior design. Crafting extraordinary mobile living spaces since 2010.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Instagram" role="listitem"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook" role="listitem"><i class="ri-facebook-circle-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube" role="listitem"><i class="ri-youtube-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest" role="listitem"><i class="ri-pinterest-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Apple" role="listitem"><i class="ri-apple-line" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <nav class="footer-links" aria-label="Services navigation">
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Full Renovation</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Custom Interiors</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Floor Plans</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Material Sourcing</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Solar &amp; Electrical</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <nav class="footer-links" aria-label="Company navigation">
+          <a href="about.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> About Us</a>
+          <a href="blog.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Blog</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Contact</a>
+          <a href="coming-soon.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Coming Soon</a>
+          <a href="#calculator"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Cost Calculator</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="tel:+18007837326"><i class="ri-phone-line" aria-hidden="true"></i> 1-800-RV-DREAM</a>
+          <a href="mailto:hello@airstreamrv.com"><i class="ri-mail-line" aria-hidden="true"></i> hello@airstreamrv.com</a>
+          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way, Austin TX</a>
+          <a href="#"><i class="ri-time-line" aria-hidden="true"></i> Mon–Fri: 8am – 6pm CST</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const tab = this.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      this.classList.add('active');
+      this.setAttribute('aria-selected','true');
+      const panel = document.getElementById('tab-' + tab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

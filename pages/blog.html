@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Airstream Renovation & Custom RV Interiors</title>
+  <meta name="description" content="RV renovation tips, design inspiration, build guides, and Airstream transformation stories from our expert team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <style>
+    .blog-filter { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:var(--space-6); }
+    .filter-btn { padding:8px 20px; border-radius:20px; border:1.5px solid var(--border-color); background:transparent; color:var(--text-secondary); font-size:0.85rem; font-weight:500; cursor:pointer; transition:var(--transition); font-family:var(--font-body); }
+    .filter-btn:hover,.filter-btn.active { background:var(--color-accent); border-color:var(--color-accent); color:white; }
+    .blog-sidebar { display:flex; flex-direction:column; gap:var(--space-3); }
+    .sidebar-card { background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--border-radius-lg); padding:var(--space-3); }
+    .sidebar-card h4 { font-size:1rem; margin-bottom:var(--space-2); padding-bottom:var(--space-1); border-bottom:2px solid var(--color-accent); display:inline-block; }
+    .sidebar-post { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid var(--border-color); }
+    .sidebar-post:last-child { border-bottom:none; }
+    .sidebar-post-icon { width:44px; height:44px; border-radius:8px; background:rgba(196,122,44,0.1); display:flex; align-items:center; justify-content:center; color:var(--color-accent); flex-shrink:0; font-size:1.1rem; }
+    .sidebar-post-text .title { font-size:0.85rem; font-weight:600; color:var(--text-primary); line-height:1.3; margin-bottom:4px; }
+    .sidebar-post-text .date { font-size:0.75rem; color:var(--text-light); }
+    .tag-cloud { display:flex; flex-wrap:wrap; gap:8px; }
+    .blog-layout { display:grid; grid-template-columns: 1fr 300px; gap:var(--space-6); }
+    @media(max-width:1024px){ .blog-layout{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<header id="header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo" aria-label="Airstream RV Home">
+        <div class="logo-icon" aria-hidden="true"><i class="ri-roadster-line"></i></div>
+        <div class="logo-text">
+          <span class="brand-name">Airstream RV</span>
+          <span class="brand-sub">Custom Interiors</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link">Services <i class="ri-arrow-down-s-line"></i></a>
+          <div class="dropdown" role="menu">
+            <a href="services.html#renovation" role="menuitem">Full Renovation</a>
+            <a href="services.html#interior" role="menuitem">Custom Interiors</a>
+            <a href="services.html#flooring" role="menuitem">Floor Plans</a>
+            <a href="services.html#materials" role="menuitem">Material Sourcing</a>
+          </div>
+        </div>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Controls -->
+      <div class="header-controls">
+        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+        <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link active">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="login.html" class="btn btn-primary btn-sm" style="margin: var(--space-4) var(--space-6); text-align: center;">Login</a>
+  <div class="mobile-controls">
+    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+    <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-bg" style="background-image: url('https://img.texasmonthly.com/2024/05/camp-landa-new-braunfels-8.jpg?auto=compress&crop=faces&fit=scale&fm=pjpg&h=640&ixlib=php-3.3.1&q=45&w=1024&wpsize=large')" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" role="text">
+          <i class="ri-article-fill" aria-hidden="true"></i>
+          Insights & Inspiration
+        </div>
+        <h1>The <span>Airstream RV</span> Blog</h1>
+        <p>Tips, guides, transformations and inspiration from our expert renovation team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Buttons -->
+      <div class="blog-filter" role="group" aria-label="Filter blog posts">
+        <button class="filter-btn active">All Posts</button>
+        <button class="filter-btn">Renovation Tips</button>
+        <button class="filter-btn">Design Ideas</button>
+        <button class="filter-btn">Build Guides</button>
+        <button class="filter-btn">Case Studies</button>
+        <button class="filter-btn">Off-Grid Living</button>
+      </div>
+
+      <div class="blog-layout">
+        <!-- Main Posts -->
+        <div>
+          <!-- Featured Post -->
+          
+
+          <!-- Post Grid -->
+          <div class="grid grid-2">
+            <article class="blog-card animate-on-scroll animate-delay-1">
+              <div class="blog-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK6s_ftB4SjizHyOJvaoTSNz61-DfxAB-KfQ&s" alt="Interior Design Styles">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="ri-calendar-line"></i> Nov 12, 2024</span>
+                  <span><i class="ri-time-line"></i> 8 min</span>
+                </div>
+                <h3>5 Interior Design Styles That Work Beautifully in Airstreams</h3>
+                <p>From Scandinavian minimalism to desert boho, here are the five aesthetics our clients love most and how to execute them.</p>
+                <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="blog-card animate-on-scroll animate-delay-2">
+              <div class="blog-img">
+                <img src="https://www.victronenergy.com/blog/wp-content/uploads/sites/10/2020/11/EXPLORIST-life-Andy-Rawls-Camper-Solar-Install-1_149475498-750x422.jpg" alt="RV Solar Systems">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="ri-calendar-line"></i> Nov 5, 2024</span>
+                  <span><i class="ri-time-line"></i> 10 min</span>
+                </div>
+                <h3>Sizing Your Solar System: How Much Power Do You Really Need?</h3>
+                <p>Understanding watts, amp-hours, and battery banks doesn't have to be confusing. Our solar engineer Alex Wu breaks it down.</p>
+                <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="blog-card animate-on-scroll animate-delay-1">
+              <div class="blog-img">
+                <img src="https://www.contemporist.com/wp-content/uploads/2021/04/modern-airstream-interior-150421-1050-01.jpg" alt="Space-Saving Secrets">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="ri-calendar-line"></i> Oct 28, 2024</span>
+                  <span><i class="ri-time-line"></i> 7 min</span>
+                </div>
+                <h3>Space-Saving Secrets: Storage Solutions for Small RV Interiors</h3>
+                <p>Every square inch counts. We share the cleverest storage ideas from our most recent builds — from under-dinette drawers to magnetic knife strips.</p>
+                <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="blog-card animate-on-scroll animate-delay-2">
+              <div class="blog-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9JqgJ4NV6tqfS9-kwB3iuFLPkyBWTECtZRg&s" alt="Best Flooring Options">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="ri-calendar-line"></i> Oct 20, 2024</span>
+                  <span><i class="ri-time-line"></i> 6 min</span>
+                </div>
+                <h3>The Best Flooring Options for RVs: A Complete Comparison</h3>
+                <p>Hardwood, LVP, cork, bamboo — which flooring type is best for your RV renovation? We weigh pros, cons, cost and durability.</p>
+                <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="blog-card animate-on-scroll animate-delay-1">
+              <div class="blog-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpc7Cz4eRtiE_Xh9SNVjyB09S9cptAFXIPNQ&s" alt="The Desert Oasis Case Study">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="ri-calendar-line"></i> Oct 10, 2024</span>
+                  <span><i class="ri-time-line"></i> 15 min</span>
+                </div>
+                <h3>The Desert Oasis: A $48K Airstream Sovereign Transformation</h3>
+                <p>Full case study of our most-featured 2024 build. We take you through every decision, challenge, and triumph from start to finish.</p>
+                <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="blog-card animate-on-scroll animate-delay-2">
+              <div class="blog-img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwBCzcrF4ZX_ncelzKvktYWhrZ7o8aG-3HrQ&s" alt="RV Lighting Design">
+              </div>
+              <div class="blog-body">
+                <div class="blog-meta">
+                  <span><i class="ri-calendar-line"></i> Oct 1, 2024</span>
+                  <span><i class="ri-time-line"></i> 9 min</span>
+                </div>
+                <h3>RV Lighting Design: Layered Light for a Luxury Feel</h3>
+                <p>Lighting transforms a space more than any other element. Here's how we design three-layer lighting systems in every premium build.</p>
+                <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Pagination -->
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:var(--space-6)">
+            <button class="btn btn-primary btn-sm">1</button>
+            <button class="filter-btn">2</button>
+            <button class="filter-btn">3</button>
+            <button class="filter-btn">Next <i class="ri-arrow-right-s-line"></i></button>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar" aria-label="Blog sidebar">
+          <!-- Search -->
+          <div class="sidebar-card">
+            <h4>Search</h4>
+            <div style="display:flex;gap:8px;margin-top:var(--space-2)">
+              <input type="search" placeholder="Search articles..." class="form-control" style="flex:1" aria-label="Search blog" />
+              <button class="btn btn-primary btn-sm" aria-label="Search"><i class="ri-search-line"></i></button>
+            </div>
+          </div>
+
+          <!-- Recent Posts -->
+          <div class="sidebar-card">
+            <h4>Recent Posts</h4>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-tools-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Complete Guide to Airstream Renovation</div>
+                <div class="date">Nov 20, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-palette-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">5 Interior Styles for Airstreams</div>
+                <div class="date">Nov 12, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-flashlight-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Sizing Your Solar System</div>
+                <div class="date">Nov 5, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-layout-3-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Space-Saving Storage Solutions</div>
+                <div class="date">Oct 28, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-wallet-3-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Budgeting for Your Airstream Project</div>
+                <div class="date">Oct 15, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-drop-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Off-Grid Plumbing Basics</div>
+                <div class="date">Oct 5, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-battery-charge-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Choosing Between Lithium and AGM</div>
+                <div class="date">Sep 28, 2024</div>
+              </div>
+            </div>
+            <div class="sidebar-post">
+              <div class="sidebar-post-icon"><i class="ri-settings-3-line"></i></div>
+              <div class="sidebar-post-text">
+                <div class="title">Winterizing Your Custom Interior</div>
+                <div class="date">Sep 20, 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="sidebar-card">
+            <h4>Topics</h4>
+            <div class="tag-cloud" style="margin-top:var(--space-2)">
+              <span class="tag">Airstream</span>
+              <span class="tag">Solar</span>
+              <span class="tag">Flooring</span>
+              <span class="tag">Design</span>
+              <span class="tag">Off-Grid</span>
+              <span class="tag">Cabinetry</span>
+              <span class="tag">Lighting</span>
+              <span class="tag">Plumbing</span>
+              <span class="tag">Budget</span>
+              <span class="tag">DIY</span>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="sidebar-card" style="background:linear-gradient(135deg,var(--color-primary),#3d2e20);border-color:transparent">
+            <h4 style="color:white">Get Weekly Tips</h4>
+            <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin:8px 0 16px">Join 5,000+ RV enthusiasts getting weekly renovation inspiration.</p>
+            <input type="email" placeholder="Your email" class="form-control" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:white;margin-bottom:8px" aria-label="Newsletter email" />
+            <button class="btn btn-primary btn-full btn-sm">Subscribe</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="header-logo" style="margin-bottom:var(--space-2)">
+          <div class="logo-icon" aria-hidden="true"><i class="ri-roadster-line"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">Airstream RV</span>
+            <span class="brand-sub">Custom Interiors</span>
+          </div>
+        </a>
+        <p>Premium Airstream renovation and custom RV interior design. Crafting extraordinary mobile living spaces since 2010.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Instagram" role="listitem"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook" role="listitem"><i class="ri-facebook-circle-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube" role="listitem"><i class="ri-youtube-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest" role="listitem"><i class="ri-pinterest-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Apple" role="listitem"><i class="ri-apple-line" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <nav class="footer-links" aria-label="Services navigation">
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Full Renovation</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Custom Interiors</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Floor Plans</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Material Sourcing</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Solar &amp; Electrical</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <nav class="footer-links" aria-label="Company navigation">
+          <a href="about.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> About Us</a>
+          <a href="blog.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Blog</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Contact</a>
+          <a href="coming-soon.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Coming Soon</a>
+          <a href="#calculator"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Cost Calculator</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="tel:+18007837326"><i class="ri-phone-line" aria-hidden="true"></i> 1-800-RV-DREAM</a>
+          <a href="mailto:hello@airstreamrv.com"><i class="ri-mail-line" aria-hidden="true"></i> hello@airstreamrv.com</a>
+          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way, Austin TX</a>
+          <a href="#"><i class="ri-time-line" aria-hidden="true"></i> Mon–Fri: 8am – 6pm CST</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

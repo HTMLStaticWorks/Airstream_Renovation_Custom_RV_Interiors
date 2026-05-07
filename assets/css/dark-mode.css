@@ -1,0 +1,186 @@
+/* ========================================
+   AIRSTREAM RV - DARK MODE STYLES
+   Version: 1.0.0
+   ======================================== */
+
+[data-theme="dark"] {
+  --bg-primary: #111111;
+  --bg-secondary: #1A1A1A;
+  --bg-card: #1E1E1E;
+  --bg-dark: #0D0D0D;
+
+  --text-primary: #F0EDE8;
+  --text-secondary: #A8A39C;
+  --text-light: #6B6560;
+
+  --border-color: #2A2A2A;
+  --footer-border: #1A1A1A;
+ 
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
+
+  --social-bg: rgba(255,255,255,0.08);
+  --social-text: rgba(255,255,255,0.6);
+  --social-border: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] #header {
+  background: rgba(17,17,17,0.95);
+  border-bottom-color: #2A2A2A;
+}
+
+[data-theme="dark"] .logo-text .brand-name {
+  color: #F0EDE8;
+}
+
+[data-theme="dark"] .mobile-nav {
+  background: #1A1A1A;
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .team-card,
+[data-theme="dark"] .case-study-card,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .contact-form-card,
+[data-theme="dark"] .calculator-card,
+[data-theme="dark"] .auth-card {
+  background: #1E1E1E;
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] .form-control {
+  background: #252525;
+  border-color: #333333;
+  color: #F0EDE8;
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--color-accent);
+  background: #2A2A2A;
+}
+
+[data-theme="dark"] .file-upload {
+  border-color: #333333;
+}
+
+[data-theme="dark"] .file-upload:hover {
+  background: rgba(196,122,44,0.05);
+}
+
+[data-theme="dark"] .oauth-btn {
+  background: #252525;
+  border-color: #333333;
+  color: #F0EDE8;
+}
+
+[data-theme="dark"] .oauth-btn:hover {
+  background: #2A2A2A;
+}
+
+[data-theme="dark"] .timeline-content {
+  background: #1E1E1E;
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] #footer {
+  background: #0D0D0D;
+  border-top-color: #1A1A1A;
+}
+
+[data-theme="dark"] .footer-bottom {
+  border-top-color: #1A1A1A;
+}
+
+[data-theme="dark"] .map-placeholder {
+  background: #1A1A1A;
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] .control-btn {
+  border-color: #2A2A2A;
+  color: #A8A39C;
+}
+
+[data-theme="dark"] .control-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(196,122,44,0.08);
+}
+
+[data-theme="dark"] .hamburger {
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] .hamburger span {
+  background: #F0EDE8;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #F0EDE8;
+}
+
+[data-theme="dark"] .about-img-secondary {
+  border-color: #111111;
+}
+
+[data-theme="dark"] .services-section {
+  background: #161616;
+}
+
+[data-theme="dark"] .process-section {
+  background: #161616;
+}
+
+[data-theme="dark"] .ba-info {
+  background: #1E1E1E;
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, #222 25%, #2a2a2a 50%, #222 75%);
+  background-size: 200% 100%;
+}
+
+[data-theme="dark"] .auth-page {
+  background: #0D0D0D;
+}
+
+[data-theme="dark"] input[type="range"] {
+  background: #2A2A2A;
+}
+
+[data-theme="dark"] .footer-links a {
+  color: rgba(255,255,255,0.5);
+}
+
+[data-theme="dark"] .nav-link {
+  color: #A8A39C;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--color-accent);
+  background: rgba(196,122,44,0.08);
+}
+
+[data-theme="dark"] .dropdown {
+  background: #1E1E1E;
+  border-color: #2A2A2A;
+}
+
+[data-theme="dark"] .dropdown a {
+  color: #A8A39C;
+}
+
+[data-theme="dark"] .case-body {
+  background: #1E1E1E;
+}

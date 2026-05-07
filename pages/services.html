@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Airstream Renovation & Custom RV Interiors</title>
+  <meta name="description" content="Full Airstream renovation, custom RV interior design, floor plans, material sourcing, solar systems, and project management. View pricing and book a consultation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <style>
+    .pricing-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius-xl);
+      padding: var(--space-5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+    .pricing-card:hover, .pricing-card.featured {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+    .pricing-card.featured { transform: translateY(-10px); }
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-accent);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      border-radius: 20px;
+    }
+    .pricing-price {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+      margin: var(--space-2) 0;
+    }
+    .pricing-price span {
+      font-size: 1rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: var(--space-3) 0;
+      width: 100%;
+      text-align: left;
+    }
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    .pricing-features li i { color: var(--color-accent); flex-shrink: 0; }
+    .service-detail {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      margin-bottom: var(--space-5);
+    }
+    .service-detail-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      min-height: 320px;
+    }
+    .service-detail-inner.reverse { direction: rtl; }
+    .service-detail-inner.reverse > * { direction: ltr; }
+    .service-detail-visual {
+      background: linear-gradient(135deg, var(--color-primary), #3d2e20);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: var(--color-accent);
+      padding: var(--space-5);
+    }
+    .service-detail-body {
+      padding: var(--space-5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .service-detail-body h3 { margin-bottom: var(--space-1); }
+    .service-detail-body p { margin-bottom: var(--space-3); }
+    @media(max-width:768px) {
+      .service-detail-inner, .service-detail-inner.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .service-detail-visual { min-height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header-logo" aria-label="Airstream RV Home">
+        <div class="logo-icon" aria-hidden="true"><i class="ri-roadster-line"></i></div>
+        <div class="logo-text">
+          <span class="brand-name">Airstream RV</span>
+          <span class="brand-sub">Custom Interiors</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <div class="nav-item">
+          <a href="services.html" class="nav-link active">Services <i class="ri-arrow-down-s-line"></i></a>
+          <div class="dropdown" role="menu">
+            <a href="services.html#renovation" role="menuitem">Full Renovation</a>
+            <a href="services.html#interior" role="menuitem">Custom Interiors</a>
+            <a href="services.html#flooring" role="menuitem">Floor Plans</a>
+            <a href="services.html#materials" role="menuitem">Material Sourcing</a>
+          </div>
+        </div>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Controls -->
+      <div class="header-controls">
+        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+        <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="services.html" class="nav-link active">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="login.html" class="btn btn-primary btn-sm" style="margin: var(--space-4) var(--space-6); text-align: center;">Login</a>
+  <div class="mobile-controls">
+    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+    <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-bg" style="background-image: url('https://tinyshinyhome.com/images/_postFullSize/Airstream-Flooring.jpg')" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" role="text">
+          <i class="ri-tools-fill" aria-hidden="true"></i>
+          Expert RV Renovation Services
+        </div>
+        <h1>Our <span>Premium</span> Services</h1>
+        <p>From full structural restorations to bespoke interior design, we offer end-to-end solutions for your mobile home.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
+          <a href="#services-grid" class="btn btn-secondary btn-lg">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE DETAILS -->
+  <section class="section" id="renovation" aria-labelledby="reno-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="label">Core Services</span>
+        <h2 id="reno-heading">Our Renovation Specialties</h2>
+        <div class="divider"></div>
+        <p>Each service is delivered with the same level of care and quality regardless of scope or budget.</p>
+      </div>
+
+      <div class="service-detail animate-on-scroll">
+        <div class="service-detail-inner">
+          <div class="service-detail-visual">
+            <img src="https://www.airstream.com/wp-content/uploads/2019/06/Pierre-Airstream-before-exterior.jpg" alt="Full Airstream Renovation" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+          </div>
+          <div class="service-detail-body">
+            <span class="tag" style="margin-bottom:var(--space-1);display:inline-block">Most Popular</span>
+            <h3>Full Airstream Renovation</h3>
+            <p>A complete gut-to-finish transformation. We strip everything down to the shell, address any structural issues, then rebuild your dream interior from scratch. Includes new insulation, electrical, plumbing, custom cabinetry, flooring, and all finishes.</p>
+            <div class="feature-list" style="margin-bottom:var(--space-3)">
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Full structural inspection & repair</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Custom floor plan design included</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>All materials sourced by us</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Weekly progress photos</span></div>
+            </div>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+              <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">From $18,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail animate-on-scroll" id="interior">
+        <div class="service-detail-inner reverse">
+          <div class="service-detail-visual">
+            <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/BlogThumbnail_Airstream_Interior_Design_1024x1024.webp?v=1729654254" alt="Custom Interior Design" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+          </div>
+          <div class="service-detail-body">
+            <h3>Custom Interior Design</h3>
+            <p>Already have a structurally sound RV? Our interior-only service focuses on cabinetry, upholstery, flooring, lighting, and all the finishing details that transform a space. We work with your existing layout or redesign it entirely.</p>
+            <div class="feature-list" style="margin-bottom:var(--space-3)">
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>3D design renderings before build</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Custom cabinetry & upholstery</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Lighting design & installation</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Hardware & fixture selection</span></div>
+            </div>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+              <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">From $8,500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail animate-on-scroll" id="flooring">
+        <div class="service-detail-inner">
+          <div class="service-detail-visual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmxSrQ8sVhNFVBDcZiPxjHDgWOlYWiJyG9w&s" alt="Floor Plan Design" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+          </div>
+          <div class="service-detail-body">
+            <h3>Floor Plan Design</h3>
+            <p>Great RV renovation starts with smart space planning. Our designers create detailed, functional floor plans that maximize every square inch — optimizing traffic flow, storage, and livability for your specific lifestyle.</p>
+            <div class="feature-list" style="margin-bottom:var(--space-3)">
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Space needs assessment</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>2D floor plan with dimensions</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>3D visualization included</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Up to 3 revision rounds</span></div>
+            </div>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+              <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+              <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">From $1,200</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail animate-on-scroll" id="materials">
+        <div class="service-detail-inner reverse">
+          <div class="service-detail-visual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZk_KGi0R9TISL8uGTdRFVJ_3VLeRdRJdb6w&s" alt="Material Sourcing" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+          </div>
+          <div class="service-detail-body">
+            <h3>Material Sourcing</h3>
+            <p>Access our network of premium suppliers. We help you select and procure the finest materials — from exotic hardwoods to lightweight stone composites — at trade pricing unavailable to the general public.</p>
+            <div class="feature-list" style="margin-bottom:var(--space-3)">
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Access to 50+ trade suppliers</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Material samples provided</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Weight & durability assessment</span></div>
+              <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Full procurement management</span></div>
+            </div>
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+              <a href="contact.html" class="btn btn-primary">Inquire</a>
+              <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">Consultation based</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="section bg-secondary" aria-labelledby="pricing-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="label">Packages</span>
+        <h2 id="pricing-heading">Choose Your Renovation Package</h2>
+        <div class="divider"></div>
+        <p>Straightforward pricing tiers to match your vision and budget. All include our quality guarantee.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="pricing-card animate-on-scroll animate-delay-1">
+          <h4>Essential Refresh</h4>
+          <div class="pricing-price">$8K<span>–$15K</span></div>
+          <p style="font-size:0.875rem">Perfect for cosmetic updates on a well-maintained RV.</p>
+          <ul class="pricing-features">
+            <li><i class="ri-check-line"></i> New flooring & wall panels</li>
+            <li><i class="ri-check-line"></i> Cabinet refinishing</li>
+            <li><i class="ri-check-line"></i> Upholstery replacement</li>
+            <li><i class="ri-check-line"></i> Lighting updates</li>
+            <li><i class="ri-check-line"></i> Hardware upgrade</li>
+            <li style="opacity:.4"><i class="ri-close-line"></i> Custom cabinetry</li>
+            <li style="opacity:.4"><i class="ri-close-line"></i> Solar system</li>
+          </ul>
+          <a href="contact.html" class="btn btn-secondary btn-full">Get Started</a>
+        </div>
+        <div class="pricing-card featured animate-on-scroll animate-delay-2">
+          <div class="pricing-badge">Most Popular</div>
+          <h4>Premium Build</h4>
+          <div class="pricing-price">$18K<span>–$45K</span></div>
+          <p style="font-size:0.875rem">A comprehensive renovation with custom design elements.</p>
+          <ul class="pricing-features">
+            <li><i class="ri-check-line"></i> Full gut renovation</li>
+            <li><i class="ri-check-line"></i> Custom cabinetry</li>
+            <li><i class="ri-check-line"></i> New electrical system</li>
+            <li><i class="ri-check-line"></i> Plumbing upgrade</li>
+            <li><i class="ri-check-line"></i> 3D design preview</li>
+            <li><i class="ri-check-line"></i> Solar system option</li>
+            <li><i class="ri-check-line"></i> 2-year warranty</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+        <div class="pricing-card animate-on-scroll animate-delay-3">
+          <h4>Luxury Edition</h4>
+          <div class="pricing-price">$50K<span>+</span></div>
+          <p style="font-size:0.875rem">The ultimate bespoke build — no compromises, no limits.</p>
+          <ul class="pricing-features">
+            <li><i class="ri-check-line"></i> Everything in Premium</li>
+            <li><i class="ri-check-line"></i> Marble / stone surfaces</li>
+            <li><i class="ri-check-line"></i> Smart home automation</li>
+            <li><i class="ri-check-line"></i> Premium audio/visual</li>
+            <li><i class="ri-check-line"></i> Full solar + battery bank</li>
+            <li><i class="ri-check-line"></i> Dedicated project manager</li>
+            <li><i class="ri-check-line"></i> Lifetime support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-secondary btn-full">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR (reused from homepage) -->
+  <section class="section calculator-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="label">Pricing Tool</span>
+        <h2>Quick Cost Estimator</h2>
+        <div class="divider"></div>
+        <p>Get an instant ballpark estimate for your project.</p>
+      </div>
+      <div class="calculator-card animate-on-scroll" id="service-calculator">
+        <div class="calc-row">
+          <div class="form-group">
+            <label for="calc-rv-type">RV Type</label>
+            <select id="calc-rv-type" class="form-control">
+              <option value="airstream">Airstream Trailer</option>
+              <option value="travel">Travel Trailer</option>
+              <option value="class_a">Class A Motorhome</option>
+              <option value="class_b">Class B Van / Camper</option>
+              <option value="fifth">Fifth Wheel</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="calc-level">Renovation Level</label>
+            <select id="calc-level" class="form-control">
+              <option value="basic">Basic Refresh</option>
+              <option value="standard" selected>Standard Renovation</option>
+              <option value="premium">Premium Build</option>
+              <option value="luxury">Full Luxury</option>
+            </select>
+          </div>
+        </div>
+        <div class="range-group">
+          <label for="calc-sqft">Interior Space <span id="sqft-display">200 sq ft</span></label>
+          <input type="range" id="calc-sqft" min="100" max="500" value="200" step="10" />
+        </div>
+        <div class="form-group">
+          <label for="calc-timeline">Timeline Preference</label>
+          <select id="calc-timeline" class="form-control">
+            <option value="standard">Standard (10–16 weeks)</option>
+            <option value="rush">Rush Build (+35% fee)</option>
+            <option value="flexible">Flexible (-5% discount)</option>
+          </select>
+        </div>
+        <div class="estimate-box" aria-live="polite">
+          <div class="estimate-label">Estimated Project Cost</div>
+          <div class="estimate-price" id="calc-estimate">$24,000 – $32,000</div>
+          <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;margin-top:8px">*Estimate only. Final pricing provided after consultation.</p>
+        </div>
+        <div style="text-align:center;margin-top:var(--space-3)">
+          <a href="contact.html" class="btn btn-primary">Get Exact Quote <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="section" style="background:var(--color-primary);padding:var(--space-10) 0;text-align:center;">
+    <div class="container" style="position:relative;z-index:1">
+      <h2 style="color:white;margin-bottom:var(--space-2)">Book a Free Consultation</h2>
+      <p style="color:rgba(255,255,255,0.7);max-width:500px;margin:0 auto var(--space-5)">60 minutes with our design team. No pressure, just ideas and honest pricing.</p>
+      <!-- Stripe / PayPal placeholders -->
+      <div style="display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="ri-calendar-line"></i> Schedule Now</a>
+        <button class="btn btn-light btn-lg" disabled style="opacity:0.6;cursor:not-allowed"><i class="ri-secure-payment-line"></i> Pay Deposit (Stripe)</button>
+        <button class="btn btn-light btn-lg" disabled style="opacity:0.6;cursor:not-allowed"><i class="ri-paypal-line"></i> PayPal</button>
+      </div>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:var(--space-2)">Payment integrations — connect your own Stripe/PayPal keys.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="header-logo" style="margin-bottom:var(--space-2)">
+          <div class="logo-icon" aria-hidden="true"><i class="ri-roadster-line"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">Airstream RV</span>
+            <span class="brand-sub">Custom Interiors</span>
+          </div>
+        </a>
+        <p>Premium Airstream renovation and custom RV interior design. Crafting extraordinary mobile living spaces since 2010.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="#" class="social-btn" aria-label="Instagram" role="listitem"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook" role="listitem"><i class="ri-facebook-circle-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube" role="listitem"><i class="ri-youtube-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest" role="listitem"><i class="ri-pinterest-line" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="Apple" role="listitem"><i class="ri-apple-line" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <nav class="footer-links" aria-label="Services navigation">
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Full Renovation</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Custom Interiors</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Floor Plans</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Material Sourcing</a>
+          <a href="services.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Solar &amp; Electrical</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <nav class="footer-links" aria-label="Company navigation">
+          <a href="about.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> About Us</a>
+          <a href="blog.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Blog</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Contact</a>
+          <a href="coming-soon.html"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Coming Soon</a>
+          <a href="#calculator"><i class="ri-arrow-right-s-line" aria-hidden="true"></i> Cost Calculator</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="tel:+18007837326"><i class="ri-phone-line" aria-hidden="true"></i> 1-800-RV-DREAM</a>
+          <a href="mailto:hello@airstreamrv.com"><i class="ri-mail-line" aria-hidden="true"></i> hello@airstreamrv.com</a>
+          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way, Austin TX</a>
+          <a href="#"><i class="ri-time-line" aria-hidden="true"></i> Mon–Fri: 8am – 6pm CST</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
