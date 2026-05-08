@@ -67,15 +67,7 @@
       <nav class="header-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="pages/home2.html" class="nav-link">Home 2</a>
-        <div class="nav-item">
-          <a href="pages/services.html" class="nav-link">Services <i class="ri-arrow-down-s-line"></i></a>
-          <div class="dropdown" role="menu">
-            <a href="pages/services.html#renovation" role="menuitem">Full Renovation</a>
-            <a href="pages/services.html#interior" role="menuitem">Custom Interiors</a>
-            <a href="pages/services.html#flooring" role="menuitem">Floor Plans</a>
-            <a href="pages/services.html#materials" role="menuitem">Material Sourcing</a>
-          </div>
-        </div>
+        <a href="pages/services.html" class="nav-link">Services</a>
         <a href="pages/blog.html" class="nav-link">Blog</a>
         <a href="pages/contact.html" class="nav-link">Contact</a>
       </nav>
@@ -322,22 +314,16 @@
   <!-- ABOUT SECTION -->
   <section class="section bg-secondary" id="about" aria-labelledby="about-heading">
     <div class="container">
-      <div class="about-split">
-        <div class="about-img-stack animate-on-scroll">
-          <div class="about-img-main" aria-label="Craftsman at work">
-            <i class="ri-tools-fill" style="font-size:5rem"></i>
-          </div>
-          <div class="about-img-secondary">
-            <div class="big-number">14+</div>
-            <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0;">Years of Premium Craftsmanship</p>
-          </div>
+      <div class="about-split" style="display: flex; flex-direction: column; align-items: center; gap: var(--space-6);">
+        <div class="about-img-stack" style="width: 100%; max-width: 900px; height: auto; position: relative;">
+          <img src="https://hopscotchtheglobe.com/wp-content/uploads/2017/04/Airstream-Renovation-Interior-Wall-Removal_3.jpg" alt="Craftsman at work" class="about-img-main" style="position: relative; width: 100%; height: auto; max-height: 500px; object-fit: cover; border-radius: var(--border-radius-xl); box-shadow: var(--shadow-lg);">
         </div>
-        <div class="about-content animate-on-scroll animate-delay-2">
+        <div class="about-content animate-on-scroll animate-delay-2" style="text-align:center; align-items:center; display:flex; flex-direction:column;">
           <span class="label">About Us</span>
           <h2 id="about-heading">Passionate Craftsmen, Extraordinary Results</h2>
           <p>Founded in 2010, we've built our reputation on one promise: transforming worn-out RVs into breathtaking custom spaces. Our team of seasoned designers and builders brings 14+ years of expertise to every project.</p>
           <p>We specialize in Airstream renovations, custom travel trailer interiors, and Class A/B/C motorhome makeovers. Every build is a one-of-a-kind creation.</p>
-          <div class="feature-list">
+          <div class="feature-list" style="text-align:left; align-items:flex-start; width:fit-content; margin:0 auto;">
             <div class="feature-item">
               <i class="ri-checkbox-circle-fill" aria-hidden="true"></i>
               <div><strong>Premium Materials Only</strong><br><span style="font-size:0.875rem;color:var(--text-secondary)">We source top-tier materials from trusted suppliers worldwide.</span></div>
@@ -351,7 +337,9 @@
               <div><strong>2-Year Craftsmanship Warranty</strong><br><span style="font-size:0.875rem;color:var(--text-secondary)">We stand behind our work with industry-leading warranty coverage.</span></div>
             </div>
           </div>
-          <a href="pages/about.html" class="btn btn-primary" style="margin-top:var(--space-2)">Meet Our Team <i class="ri-arrow-right-line"></i></a>
+          <div style="display:flex; justify-content:center; width:100%; margin-top:var(--space-2)">
+            <a href="pages/about.html" class="btn btn-primary">Meet Our Team <i class="ri-arrow-right-line"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -599,7 +587,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
+      <p>&copy; 2026 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
       <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></p>
     </div>
   </div>

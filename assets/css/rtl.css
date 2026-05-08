@@ -9,11 +9,11 @@
 }
 
 [dir="rtl"] .header-inner {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .header-logo {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .logo-text {
@@ -21,11 +21,11 @@
 }
 
 [dir="rtl"] .header-nav {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .header-controls {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .mobile-nav .nav-link {
@@ -37,19 +37,19 @@
 }
 
 [dir="rtl"] .footer-logo {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .footer-links a {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .footer-bottom {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .feature-item {
-  flex-direction: row-reverse;
+  
   text-align: right;
 }
 
@@ -73,7 +73,7 @@
 }
 
 [dir="rtl"] .timeline-item {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .timeline-content {
@@ -85,15 +85,15 @@
 }
 
 [dir="rtl"] .checkbox-group {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .hero-cta {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .hero-stats {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .contact-grid {
@@ -101,7 +101,7 @@
 }
 
 [dir="rtl"] .blog-meta {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .ba-label {
@@ -115,7 +115,7 @@
 }
 
 [dir="rtl"] .breadcrumb {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .auth-page-controls {
@@ -124,15 +124,15 @@
 }
 
 [dir="rtl"] .read-more {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .countdown {
-  flex-direction: row-reverse;
+  
 }
 
 [dir="rtl"] .newsletter-form {
-  flex-direction: row-reverse;
+  
 }
 
 @media (max-width: 640px) {
@@ -141,6 +141,6 @@
     right: 20px;
   }
   [dir="rtl"] .timeline-item {
-    flex-direction: row-reverse;
+    
   }
 }

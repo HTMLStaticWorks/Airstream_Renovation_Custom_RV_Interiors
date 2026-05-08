@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login | Airstream Renovation & Custom RV Interiors</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta name="description" content="Log in to your Airstream RV client portal to track your renovation project, view invoices, and communicate with your team." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,7 +58,7 @@
 
 <!-- Top-right controls (outside card) -->
 <div class="auth-page-controls">
-  <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+  <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
   <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
 </div>
 
@@ -85,7 +86,7 @@
     <form id="login-form" data-validate novalidate aria-label="Login form">
       <div class="form-group">
         <label for="login-email">Email Address <span style="color:#e74c3c" aria-hidden="true">*</span></label>
-        <input type="email" id="login-email" name="email" class="form-control" placeholder="you@example.com" data-rules="required,email" required aria-required="true" autocomplete="email" />
+        <input type="email" id="login-email" name="email" class="form-control" placeholder="" data-rules="required,email" required aria-required="true" autocomplete="email" />
         <span class="form-error" role="alert"></span>
       </div>
       <div class="form-group">
@@ -94,7 +95,7 @@
           <a href="#" class="forgot-link">Forgot password?</a>
         </div>
         <div class="pass-toggle">
-          <input type="password" id="login-password" name="password" class="form-control" placeholder="Enter your password" data-rules="required" required aria-required="true" autocomplete="current-password" />
+          <input type="password" id="login-password" name="password" class="form-control" placeholder="" data-rules="required" required aria-required="true" autocomplete="current-password" />
           <button type="button" aria-label="Toggle password visibility" id="toggle-pass">
             <i class="ri-eye-line"></i>
           </button>
@@ -127,9 +128,7 @@
     <p class="auth-footer-text">
       Don't have an account? <a href="register.html">Create one free</a>
     </p>
-    <p class="auth-footer-text" style="margin-top:4px">
-      <a href="index.html" style="color:var(--text-light);font-size:0.8rem"><i class="ri-arrow-left-line"></i> Back to website</a>
-    </p>
+    
   </div>
 </main>
 
@@ -148,3 +147,6 @@
 </script>
 </body>
 </html>
+
+
+

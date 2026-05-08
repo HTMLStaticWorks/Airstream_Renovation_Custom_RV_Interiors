@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Airstream Renovation & Custom RV Interiors</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta name="description" content="Full Airstream renovation, custom RV interior design, floor plans, material sourcing, solar systems, and project management. View pricing and book a consultation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,6 +103,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .service-detail-body .feature-list {
+      align-items: flex-start;
+      width: fit-content;
+      margin: 0 auto;
     }
     .service-detail-body h3 { margin-bottom: var(--space-1); }
     .service-detail-body p { margin-bottom: var(--space-3); }
@@ -134,13 +142,7 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
         <div class="nav-item">
-          <a href="services.html" class="nav-link active">Services <i class="ri-arrow-down-s-line"></i></a>
-          <div class="dropdown" role="menu">
-            <a href="services.html#renovation" role="menuitem">Full Renovation</a>
-            <a href="services.html#interior" role="menuitem">Custom Interiors</a>
-            <a href="services.html#flooring" role="menuitem">Floor Plans</a>
-            <a href="services.html#materials" role="menuitem">Material Sourcing</a>
-          </div>
+          <a href="services.html" class="nav-link active">Services</a>
         </div>
         <a href="blog.html" class="nav-link">Blog</a>
         <a href="about.html" class="nav-link">About</a>
@@ -149,7 +151,7 @@
 
       <!-- Controls -->
       <div class="header-controls">
-        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
         <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
         <a href="login.html" class="btn btn-primary btn-sm">Login</a>
       </div>
@@ -168,11 +170,11 @@
   <a href="home2.html" class="nav-link">Home 2</a>
   <a href="services.html" class="nav-link active">Services</a>
   <a href="blog.html" class="nav-link">Blog</a>
-  <a href="contact.html" class="nav-link">Contact</a>
   <a href="about.html" class="nav-link">About</a>
+  <a href="contact.html" class="nav-link">Contact</a>
   <a href="login.html" class="btn btn-primary btn-sm" style="margin: var(--space-4) var(--space-6); text-align: center;">Login</a>
   <div class="mobile-controls">
-    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
     <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
   </div>
 </div>
@@ -191,7 +193,7 @@
         </div>
         <h1>Our <span>Premium</span> Services</h1>
         <p>From full structural restorations to bespoke interior design, we offer end-to-end solutions for your mobile home.</p>
-        <div class="hero-btns">
+        <div class="hero-cta">
           <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
           <a href="#services-grid" class="btn btn-secondary btn-lg">Explore Services</a>
         </div>
@@ -224,7 +226,7 @@
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>All materials sourced by us</span></div>
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Weekly progress photos</span></div>
             </div>
-            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center;justify-content:center">
               <a href="contact.html" class="btn btn-primary">Get a Quote</a>
               <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">From $18,000</span>
             </div>
@@ -246,7 +248,7 @@
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Lighting design & installation</span></div>
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Hardware & fixture selection</span></div>
             </div>
-            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center;justify-content:center">
               <a href="contact.html" class="btn btn-primary">Get a Quote</a>
               <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">From $8,500</span>
             </div>
@@ -257,7 +259,7 @@
       <div class="service-detail animate-on-scroll" id="flooring">
         <div class="service-detail-inner">
           <div class="service-detail-visual">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmxSrQ8sVhNFVBDcZiPxjHDgWOlYWiJyG9w&s" alt="Floor Plan Design" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+            <img src="https://thumbnailer.drivenow.com.au/oxide/thumbnailer/LCwy7PVFLi5IbVyR6_zLgcX79YrCz8K5Fxc-Nrf8kak/r:w=400&h=319/f:f=jpg/webdata/images/supplier/vehicles/cruise-america/C30ft-Day-night.jpg?etag=e35f9ecc15e09759b84ec815fdcd5871" alt="Floor Plan Design" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
           </div>
           <div class="service-detail-body">
             <h3>Floor Plan Design</h3>
@@ -268,7 +270,7 @@
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>3D visualization included</span></div>
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Up to 3 revision rounds</span></div>
             </div>
-            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center;justify-content:center">
               <a href="contact.html" class="btn btn-primary">Get a Quote</a>
               <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">From $1,200</span>
             </div>
@@ -279,7 +281,7 @@
       <div class="service-detail animate-on-scroll" id="materials">
         <div class="service-detail-inner reverse">
           <div class="service-detail-visual">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZk_KGi0R9TISL8uGTdRFVJ_3VLeRdRJdb6w&s" alt="Material Sourcing" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+            <img src="https://www.airstream.com/wp-content/uploads/2018/12/Heritage-HowItsMade-TravelTrailers-4-AttachStructure.jpg?auto=format,compress&fit=crop&crop=edges&w=3024" alt="Material Sourcing" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
           </div>
           <div class="service-detail-body">
             <h3>Material Sourcing</h3>
@@ -290,7 +292,7 @@
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Weight & durability assessment</span></div>
               <div class="feature-item"><i class="ri-check-line" style="color:var(--color-accent)"></i><span>Full procurement management</span></div>
             </div>
-            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center">
+            <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;align-items:center;justify-content:center">
               <a href="contact.html" class="btn btn-primary">Inquire</a>
               <span style="color:var(--color-accent);font-weight:600;font-family:var(--font-heading)">Consultation based</span>
             </div>
@@ -409,7 +411,7 @@
           <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;margin-top:8px">*Estimate only. Final pricing provided after consultation.</p>
         </div>
         <div style="text-align:center;margin-top:var(--space-3)">
-          <a href="contact.html" class="btn btn-primary">Get Exact Quote <i class="ri-arrow-right-line"></i></a>
+          <a href="contact.html" class="btn btn-primary">Get Quote <i class="ri-arrow-right-line"></i></a>
         </div>
       </div>
     </div>
@@ -422,9 +424,9 @@
       <p style="color:rgba(255,255,255,0.7);max-width:500px;margin:0 auto var(--space-5)">60 minutes with our design team. No pressure, just ideas and honest pricing.</p>
       <!-- Stripe / PayPal placeholders -->
       <div style="display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap">
-        <a href="contact.html" class="btn btn-primary btn-lg"><i class="ri-calendar-line"></i> Schedule Now</a>
-        <button class="btn btn-light btn-lg" disabled style="opacity:0.6;cursor:not-allowed"><i class="ri-secure-payment-line"></i> Pay Deposit (Stripe)</button>
-        <button class="btn btn-light btn-lg" disabled style="opacity:0.6;cursor:not-allowed"><i class="ri-paypal-line"></i> PayPal</button>
+        <a href="contact.html" class="btn btn-primary btn-lg booking-btn"><i class="ri-calendar-line"></i> Schedule Now</a>
+        <button class="btn btn-light btn-lg booking-btn" disabled style="opacity:0.6;cursor:not-allowed"><i class="ri-secure-payment-line"></i> Pay Deposit</button>
+        <button class="btn btn-light btn-lg booking-btn" disabled style="opacity:0.6;cursor:not-allowed"><i class="ri-google-line"></i> Google pay</button>
       </div>
       <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:var(--space-2)">Payment integrations — connect your own Stripe/PayPal keys.</p>
     </div>
@@ -483,7 +485,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
+      <p>&copy; 2026 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
       <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></p>
     </div>
   </div>
@@ -492,3 +494,6 @@
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+
+

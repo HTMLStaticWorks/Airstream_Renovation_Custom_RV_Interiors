@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Airstream Renovation & Custom RV Interiors</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <meta name="description" content="RV renovation tips, design inspiration, build guides, and Airstream transformation stories from our expert team." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +27,24 @@
     .sidebar-post-text .date { font-size:0.75rem; color:var(--text-light); }
     .tag-cloud { display:flex; flex-wrap:wrap; gap:8px; }
     .blog-layout { display:grid; grid-template-columns: 1fr 300px; gap:var(--space-6); }
-    @media(max-width:1024px){ .blog-layout{ grid-template-columns:1fr; } }
+    .merged-newsletter, .extra-tags, .desktop-hide { display: none; }
+
+    @media(max-width:1024px){ 
+      .blog-layout{ grid-template-columns:1fr; } 
+      .blog-sidebar { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4); margin-top:var(--space-6); }
+      .sidebar-card:first-child { grid-column: span 2; }
+      .sidebar-card h4 { display: block; text-align: center; margin: 0 auto var(--space-2); width: fit-content; }
+      .tag-cloud { justify-content: center; }
+      .sidebar-post { justify-content: flex-start; text-align: left; }
+      .newsletter-card { display: none; }
+      .merged-newsletter, .extra-tags, .desktop-hide { display: block !important; }
+    }
+    @media(max-width:480px){
+      .blog-sidebar { grid-template-columns: 1fr; }
+      .sidebar-card:first-child { grid-column: span 1; }
+      .extra-tags { display: none !important; }
+      .desktop-hide { display: block !important; }
+    }
   </style>
 </head>
 <body>
@@ -48,15 +66,7 @@
       <nav class="header-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
-        <div class="nav-item">
-          <a href="services.html" class="nav-link">Services <i class="ri-arrow-down-s-line"></i></a>
-          <div class="dropdown" role="menu">
-            <a href="services.html#renovation" role="menuitem">Full Renovation</a>
-            <a href="services.html#interior" role="menuitem">Custom Interiors</a>
-            <a href="services.html#flooring" role="menuitem">Floor Plans</a>
-            <a href="services.html#materials" role="menuitem">Material Sourcing</a>
-          </div>
-        </div>
+        <a href="services.html" class="nav-link">Services</a>
         <a href="blog.html" class="nav-link active">Blog</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
@@ -64,7 +74,7 @@
 
       <!-- Controls -->
       <div class="header-controls">
-        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+        <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
         <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
         <a href="login.html" class="btn btn-primary btn-sm">Login</a>
       </div>
@@ -83,11 +93,11 @@
   <a href="home2.html" class="nav-link">Home 2</a>
   <a href="services.html" class="nav-link">Services</a>
   <a href="blog.html" class="nav-link active">Blog</a>
-  <a href="contact.html" class="nav-link">Contact</a>
   <a href="about.html" class="nav-link">About</a>
+  <a href="contact.html" class="nav-link">Contact</a>
   <a href="login.html" class="btn btn-primary btn-sm" style="margin: var(--space-4) var(--space-6); text-align: center;">Login</a>
   <div class="mobile-controls">
-    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL <i class="ri-layout-left-2-line"></i></button>
+    <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
     <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
   </div>
 </div>
@@ -219,10 +229,12 @@
 
           <!-- Pagination -->
           <div style="display:flex;justify-content:center;gap:8px;margin-top:var(--space-6)">
+                        <button class="filter-btn">Back <i class=""></i></button>
+
             <button class="btn btn-primary btn-sm">1</button>
             <button class="filter-btn">2</button>
             <button class="filter-btn">3</button>
-            <button class="filter-btn">Next <i class="ri-arrow-right-s-line"></i></button>
+            <button class="filter-btn">Next <i class=""></i></button>
           </div>
         </div>
 
@@ -302,21 +314,38 @@
           <div class="sidebar-card">
             <h4>Topics</h4>
             <div class="tag-cloud" style="margin-top:var(--space-2)">
-              <span class="tag">Airstream</span>
-              <span class="tag">Solar</span>
-              <span class="tag">Flooring</span>
-              <span class="tag">Design</span>
-              <span class="tag">Off-Grid</span>
-              <span class="tag">Cabinetry</span>
-              <span class="tag">Lighting</span>
-              <span class="tag">Plumbing</span>
-              <span class="tag">Budget</span>
-              <span class="tag">DIY</span>
+              <span class="tag">Airstream Restoration</span>
+              <span class="tag">Custom Interiors</span>
+              <span class="tag">Solar Power</span>
+              <span class="tag">Off-Grid Living</span>
+              <span class="tag">Modern Flooring</span>
+              <!-- Hidden on Desktop (1440px) only -->
+              <span class="tag desktop-hide">Luxury Lighting</span>
+              <span class="tag desktop-hide">Smart Cabinetry</span>
+              <span class="tag desktop-hide">Plumbing Hacks</span>
+              <span class="tag desktop-hide">Budgeting Tips</span>
+              <span class="tag desktop-hide">DIY Guides</span>
+              <!-- Extra tags for Tablet (1024px/768px) only -->
+              <span class="tag extra-tags">Chassis Work</span>
+              <span class="tag extra-tags">Climate Control</span>
+              <span class="tag extra-tags">Upholstery</span>
+              <span class="tag extra-tags">Smart Home</span>
+              <span class="tag extra-tags">Maintenance</span>
+            </div>
+            
+            <!-- Integrated Newsletter (Visible on Tablet/Mobile) -->
+            <div class="merged-newsletter" style="margin-top:var(--space-4); padding-top:var(--space-3); border-top:1px solid var(--border-color)">
+              <h4 style="font-size:0.95rem; margin-bottom:12px; display:block; text-align:center">Get Weekly Tips</h4>
+              <p style="color:var(--text-light); font-size:0.8rem; margin-bottom:12px; text-align:center">Join 5,000+ RV enthusiasts getting weekly inspiration.</p>
+              <div style="display:flex; flex-direction:column; gap:8px">
+                <input type="email" placeholder="Your email" class="form-control" style="font-size:0.85rem" aria-label="Newsletter email" />
+                <button class="btn btn-primary btn-full btn-sm">Subscribe</button>
+              </div>
             </div>
           </div>
 
-          <!-- Newsletter -->
-          <div class="sidebar-card" style="background:linear-gradient(135deg,var(--color-primary),#3d2e20);border-color:transparent">
+          <!-- Separate Newsletter (Visible on Desktop) -->
+          <div class="sidebar-card newsletter-card" style="background:linear-gradient(135deg,var(--color-primary),#3d2e20);border-color:transparent">
             <h4 style="color:white">Get Weekly Tips</h4>
             <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin:8px 0 16px">Join 5,000+ RV enthusiasts getting weekly renovation inspiration.</p>
             <input type="email" placeholder="Your email" class="form-control" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:white;margin-bottom:8px" aria-label="Newsletter email" />
@@ -380,7 +409,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
+      <p>&copy; 2026 Airstream Renovation &amp; Custom RV Interiors. All rights reserved.</p>
       <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Sitemap</a></p>
     </div>
   </div>
@@ -397,3 +426,6 @@
 </script>
 </body>
 </html>
+
+
+

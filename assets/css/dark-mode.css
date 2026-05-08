@@ -162,6 +162,15 @@
   color: rgba(255,255,255,0.5);
 }
 
+[data-theme="dark"] .footer-links a:hover {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .footer-col h4:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
 [data-theme="dark"] .nav-link {
   color: #A8A39C;
 }
@@ -179,6 +188,11 @@
 
 [data-theme="dark"] .dropdown a {
   color: #A8A39C;
+}
+
+[data-theme="dark"] .btn i[class*="ri-calendar"] {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
 }
 
 [data-theme="dark"] .case-body {
