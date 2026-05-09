@@ -92,6 +92,10 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -646,9 +650,9 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(196, 122, 44, 0.15);
-  border: 1px solid rgba(196, 122, 44, 0.3);
-  color: var(--color-secondary);
+  background: rgba(17, 17, 17, 0.85);
+  border: 1px solid var(--color-accent);
+  color: white;
   padding: 8px 20px;
   border-radius: 30px;
   font-size: 0.8rem;
@@ -657,6 +661,7 @@ p {
   text-transform: uppercase;
   margin-bottom: var(--space-3);
   animation: fadeInDown 0.8s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
@@ -721,6 +726,7 @@ p {
   margin-top: 4px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  white-space: nowrap;
 }
 
 /* ========================================
@@ -1407,6 +1413,7 @@ textarea.form-control {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  text-align: left;
 }
 
 .feature-item i {
@@ -2871,4 +2878,28 @@ input[type="range"]::-webkit-slider-thumb {
 .booking-btn {
   width: 100%;
   max-width: 280px;
+}
+
+@media (max-width: 360px) {
+  .auth-card {
+    padding: var(--space-3) !important;
+  }
+  
+  .auth-extra {
+    gap: 4px !important;
+  }
+
+  .auth-extra .checkbox-group label,
+  .auth-extra .forgot-link {
+    font-size: 0.7rem !important;
+  }
+
+  .checkbox-group {
+    gap: 6px !important;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
 }

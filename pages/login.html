@@ -19,6 +19,7 @@
       inset: 0;
       background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
       z-index: 0;
+      overflow: hidden;
     }
     .auth-bg-deco::before {
       content: '';
@@ -90,10 +91,7 @@
         <span class="form-error" role="alert"></span>
       </div>
       <div class="form-group">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-          <label for="login-password" style="margin-bottom:0">Password <span style="color:#e74c3c" aria-hidden="true">*</span></label>
-          <a href="#" class="forgot-link">Forgot password?</a>
-        </div>
+        <label for="login-password">Password <span style="color:#e74c3c" aria-hidden="true">*</span></label>
         <div class="pass-toggle">
           <input type="password" id="login-password" name="password" class="form-control" placeholder="" data-rules="required" required aria-required="true" autocomplete="current-password" />
           <button type="button" aria-label="Toggle password visibility" id="toggle-pass">
@@ -103,9 +101,12 @@
         <span class="form-error" role="alert"></span>
       </div>
 
-      <div class="checkbox-group" style="margin-bottom:var(--space-3)">
-        <input type="checkbox" id="remember" name="remember" />
-        <label for="remember">Keep me signed in</label>
+      <div class="auth-extra" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-4); gap: 8px;">
+        <div class="checkbox-group" style="margin-bottom:0">
+          <input type="checkbox" id="remember" name="remember" />
+          <label for="remember">Remember me</label>
+        </div>
+        <a href="#" class="forgot-link">Forgot password?</a>
       </div>
 
       <button type="submit" class="btn btn-primary btn-full">
