@@ -90,13 +90,17 @@
     .service-detail-inner.reverse { direction: rtl; }
     .service-detail-inner.reverse > * { direction: ltr; }
     .service-detail-visual {
-      background: linear-gradient(135deg, var(--color-primary), #3d2e20);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
-      color: var(--color-accent);
-      padding: var(--space-5);
+      background: none;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+    }
+    .service-detail-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .service-detail-body {
       padding: var(--space-5);
@@ -169,17 +173,16 @@
 <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
   <a href="index.html" class="nav-link">Home</a>
   <a href="home2.html" class="nav-link">Home 2</a>
-    <a href="about.html" class="nav-link">About</a>
-
+  <a href="about.html" class="nav-link">About</a>
   <a href="services.html" class="nav-link active">Services</a>
   <a href="blog.html" class="nav-link">Blog</a>
   <a href="contact.html" class="nav-link">Contact</a>
-  <div style="padding: var(--space-4) var(--space-2);">
-    <a href="login.html" class="btn btn-primary btn-full">Login</a>
-  </div>
   <div class="mobile-controls">
     <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
     <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+  </div>
+  <div class="mobile-login-container">
+    <a href="login.html" class="btn btn-primary btn-full">Login</a>
   </div>
 </div>
 
@@ -218,7 +221,7 @@
       <div class="service-detail animate-on-scroll">
         <div class="service-detail-inner">
           <div class="service-detail-visual">
-            <img src="https://www.airstream.com/wp-content/uploads/2019/06/Pierre-Airstream-before-exterior.jpg" alt="Full Airstream Renovation" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+            <img src="https://moosestudio.com/wp-content/uploads/2015/08/image1.jpg" alt="Full Airstream Renovation">
           </div>
           <div class="service-detail-body">
             <span class="tag" style="margin-bottom:var(--space-1);display:inline-block">Most Popular</span>
@@ -241,7 +244,7 @@
       <div class="service-detail animate-on-scroll" id="interior">
         <div class="service-detail-inner reverse">
           <div class="service-detail-visual">
-            <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/BlogThumbnail_Airstream_Interior_Design_1024x1024.webp?v=1729654254" alt="Custom Interior Design" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+            <img src="https://cdn.shopify.com/s/files/1/0558/6413/1764/files/BlogThumbnail_Airstream_Interior_Design_1024x1024.webp?v=1729654254" alt="Custom Interior Design">
           </div>
           <div class="service-detail-body">
             <h3>Custom Interior Design</h3>
@@ -263,7 +266,7 @@
       <div class="service-detail animate-on-scroll" id="flooring">
         <div class="service-detail-inner">
           <div class="service-detail-visual">
-            <img src="https://thumbnailer.drivenow.com.au/oxide/thumbnailer/LCwy7PVFLi5IbVyR6_zLgcX79YrCz8K5Fxc-Nrf8kak/r:w=400&h=319/f:f=jpg/webdata/images/supplier/vehicles/cruise-america/C30ft-Day-night.jpg?etag=e35f9ecc15e09759b84ec815fdcd5871" alt="Floor Plan Design" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+            <img src="https://i.pinimg.com/564x/79/e2/a1/79e2a17cf4c00ed20fcf42d44f73a2bd.jpg" alt="Floor Interior Design">
           </div>
           <div class="service-detail-body">
             <h3>Floor Plan Design</h3>
@@ -285,7 +288,7 @@
       <div class="service-detail animate-on-scroll" id="materials">
         <div class="service-detail-inner reverse">
           <div class="service-detail-visual">
-            <img src="https://www.airstream.com/wp-content/uploads/2018/12/Heritage-HowItsMade-TravelTrailers-4-AttachStructure.jpg?auto=format,compress&fit=crop&crop=edges&w=3024" alt="Material Sourcing" style="width:100%;height:100%;object-fit:cover;border-radius:15px">
+            <img src="https://www.airstream.com/wp-content/uploads/2018/12/Heritage-HowItsMade-TravelTrailers-4-AttachStructure.jpg?auto=format,compress&fit=crop&crop=edges&w=3024" alt="Material Sourcing">
           </div>
           <div class="service-detail-body">
             <h3>Material Sourcing</h3>

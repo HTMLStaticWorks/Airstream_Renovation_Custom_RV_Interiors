@@ -25,8 +25,8 @@
       gap: var(--space-3);
     }
     .feature-box {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
       border-radius: var(--border-radius-lg);
       padding: var(--space-4);
       text-align: center;
@@ -34,35 +34,225 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      aspect-ratio: 1 / 1;
+      justify-content: flex-start;
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
     }
     .feature-box:hover {
-      background: rgba(196,122,44,0.1);
-      border-color: rgba(196,122,44,0.3);
-      transform: translateY(-4px);
+      border-color: var(--color-accent);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
     }
-    .feature-box i {
-      font-size: 2rem;
-      color: var(--color-accent);
+    .feature-box .card-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(196, 122, 44, 0.12), rgba(196, 122, 44, 0.04));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
       margin-bottom: var(--space-2);
-      display: block;
+      color: var(--color-accent);
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .feature-box:hover .card-icon {
+      background: linear-gradient(135deg, var(--color-accent), #a86520);
+      color: white;
     }
     .feature-box img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
+      width: calc(100% + 2 * var(--space-4));
+      max-width: none;
+      margin-top: calc(-1 * var(--space-4));
+      margin-left: calc(-1 * var(--space-4));
+      margin-right: calc(-1 * var(--space-4));
+      aspect-ratio: 16 / 10;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      border-top-left-radius: var(--border-radius-lg);
+      border-top-right-radius: var(--border-radius-lg);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-bottom: var(--space-3);
     }
-    .feature-box h4 { color: var(--text-primary); margin-bottom: 8px; }
-    .feature-box p { color: var(--text-secondary); font-size: 0.875rem; }
+    .feature-box h4 {
+      color: var(--text-primary);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+      font-family: var(--font-heading);
+    }
+    .feature-box p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: var(--space-4);
+    }
+    .feature-box .btn {
+      margin-top: auto;
+    }
     .card img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 12px;
+    }
+    
+    /* Featured Case Studies Alignment Overrides */
+    .case-study-card .case-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .case-study-card .case-stats {
+      margin-top: auto;
+    }
+    
+    /* Premium Materials Showcase Cards overrides */
+    .bg-secondary .grid-4 {
+      gap: var(--space-4);
+    }
+    .bg-secondary .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      position: relative;
+    }
+    .bg-secondary .card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .bg-secondary .card img {
+      width: calc(100% + 2 * var(--space-4)) !important;
+      max-width: none !important;
+      margin-top: calc(-1 * var(--space-4)) !important;
+      margin-left: calc(-1 * var(--space-4)) !important;
+      margin-right: calc(-1 * var(--space-4)) !important;
+      aspect-ratio: 16 / 10 !important;
+      object-fit: cover !important;
+      border-top-left-radius: var(--border-radius-lg) !important;
+      border-top-right-radius: var(--border-radius-lg) !important;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      margin-bottom: var(--space-3) !important;
+    }
+    .bg-secondary .card .card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(196, 122, 44, 0.12), rgba(196, 122, 44, 0.04));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: var(--space-2);
+      color: var(--color-accent);
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    .bg-secondary .card:hover .card-icon {
+      background: linear-gradient(135deg, var(--color-accent), #a86520);
+      color: white;
+    }
+    .bg-secondary .card h4 {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+      font-family: var(--font-heading);
+    }
+    .bg-secondary .card p {
+      color: var(--text-secondary);
+      font-size: 0.825rem;
+      line-height: 1.6;
+      margin-bottom: var(--space-2);
+    }
+    .bg-secondary .card .material-features {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-3) auto var(--space-4) auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2);
+      width: fit-content;
+    }
+    .bg-secondary .card .material-features li {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .bg-secondary .card .material-features li i {
+      color: var(--color-accent);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .bg-secondary .card .btn {
+      margin-top: auto;
+    }
+    
+    @media(max-width:640px) {
+      .bg-secondary .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media(min-width:1440px) {
+      .features-alt .container {
+        max-width: 1400px;
+      }
+      .bg-secondary .card {
+        padding: var(--space-5);
+      }
+      .bg-secondary .card img {
+        width: calc(100% + 2 * var(--space-5)) !important;
+        margin-top: calc(-1 * var(--space-5)) !important;
+        margin-left: calc(-1 * var(--space-5)) !important;
+        margin-right: calc(-1 * var(--space-5)) !important;
+        aspect-ratio: 16 / 11 !important;
+        margin-bottom: var(--space-4) !important;
+      }
+      .bg-secondary .card h4 {
+        font-size: 1.25rem;
+        margin-bottom: var(--space-3);
+      }
+      .bg-secondary .card p {
+        font-size: 0.9rem;
+        margin-bottom: var(--space-5);
+      }
+      .feature-box {
+        padding: var(--space-5);
+      }
+      .feature-box img {
+        width: calc(100% + 2 * var(--space-5));
+        margin-top: calc(-1 * var(--space-5));
+        margin-left: calc(-1 * var(--space-5));
+        margin-right: calc(-1 * var(--space-5));
+        aspect-ratio: 16 / 11;
+        margin-bottom: var(--space-4);
+      }
+      .feature-box h4 {
+        font-size: 1.25rem;
+        margin-bottom: var(--space-3);
+      }
+      .feature-box p {
+        font-size: 0.9rem;
+        margin-bottom: var(--space-5);
+      }
     }
     @media(max-width:1024px) {
       .hero2-inner { grid-template-columns: 1fr; }
@@ -148,17 +338,16 @@
 <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
   <a href="index.html" class="nav-link">Home</a>
   <a href="home2.html" class="nav-link active">Home 2</a>
-    <a href="about.html" class="nav-link">About</a>
-
+  <a href="about.html" class="nav-link">About</a>
   <a href="services.html" class="nav-link">Services</a>
   <a href="blog.html" class="nav-link">Blog</a>
   <a href="contact.html" class="nav-link">Contact</a>
-  <div style="padding: var(--space-4) var(--space-2);">
-    <a href="login.html" class="btn btn-primary btn-full">Login</a>
-  </div>
   <div class="mobile-controls">
     <button class="control-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
     <button class="control-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="ri-moon-line"></i></button>
+  </div>
+  <div class="mobile-login-container">
+    <a href="login.html" class="btn btn-primary btn-full">Login</a>
   </div>
 </div>
 
@@ -207,24 +396,28 @@
       </div>
       <div class="features-grid">
         <div class="feature-box animate-on-scroll animate-delay-1">
-          <img src="https://www.airstream.com/wp-content/uploads/2025/01/airstream-classic-33fB-is-the-luxury-trailer-of-the-year.jpg" alt="Premium Materials" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <img src="https://www.airstream.com/wp-content/uploads/2025/01/airstream-classic-33fB-is-the-luxury-trailer-of-the-year.jpg" alt="Premium Materials">
           <h4>Premium Materials</h4>
-          <p>We source only the finest hardwoods, stone, and fabrics.</p>
+          <p>We source only the finest premium hardwoods, lightweight quartz, and marine-grade fabrics engineered for high durability, lightweight performance, and visual elegance in luxury spaces.</p>
+          <a href="services.html" class="btn btn-secondary btn-sm btn-full">Explore Materials</a>
         </div>
         <div class="feature-box animate-on-scroll animate-delay-2">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZmCvKZRFB0igCPEBVLeEqWaSg_jSilAiIg&s" alt="3D Design Preview" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZmCvKZRFB0igCPEBVLeEqWaSg_jSilAiIg&s" alt="3D Design Preview">
           <h4>3D Design Preview</h4>
-          <p>See your renovation before a single nail is driven.</p>
+          <p>Immerse yourself in high-definition 3D renderings and comprehensive spatial planning layouts to explore and refine your layout before our master craftsmen begin the build.</p>
+          <a href="contact.html" class="btn btn-secondary btn-sm btn-full">Get 3D Design</a>
         </div>
         <div class="feature-box animate-on-scroll animate-delay-3">
-          <img src="https://5.imimg.com/data5/SELLER/Default/2025/1/478226353/LT/JQ/HP/26610597/kent-sterling-star-500x500.jpg" alt="2-Year Warranty" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <img src="https://www.airstream.com/wp-content/uploads/2025/11/Resize-image-project-2025-11-17T122422.076.jpeg" alt="Extended Warranty">
           <h4>4-Year Warranty</h4>
-          <p>Industry-leading warranty for complete peace of mind.</p>
+          <p>Enjoy complete confidence with our industry-leading comprehensive structural and build warranty coverage that ensures premium support long after you hit the road.</p>
+          <a href="about.html" class="btn btn-secondary btn-sm btn-full">Warranty Details</a>
         </div>
         <div class="feature-box animate-on-scroll animate-delay-4">
-          <img src="https://i.insider.com/61fb08cfd534ea00198f278b?width=700" alt="Off-Grid Capable" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <img src="https://i.insider.com/61fb08cfd534ea00198f278b?width=700" alt="Off-Grid Capable">
           <h4>Off-Grid Capable</h4>
-          <p>Full solar integration for true off-grid adventures.</p>
+          <p>Go off the beaten path with advanced high-capacity lithium battery storage, high-efficiency solar panel arrays, and smart power management for complete off-grid autonomy.</p>
+          <a href="services.html" class="btn btn-secondary btn-sm btn-full">View Solar Specs</a>
         </div>
       </div>
     </div>
@@ -295,7 +488,7 @@
       <div class="grid grid-3">
         <article class="case-study-card animate-on-scroll animate-delay-1">
           <div class="case-img">
-            <img src="https://tinyshinyhome.com/images/_postFullSize/9216/hurricane-airstream-sunset.jpg" alt="The Desert Oasis" style="width:100%;object-fit:cover">
+            <img src="https://tinyshinyhome.com/images/_postFullSize/9216/hurricane-airstream-sunset.jpg" alt="The Desert Oasis">
           </div>
           <div class="case-header">
             <span class="case-badge">Airstream</span>
@@ -313,11 +506,11 @@
         </article>
         <article class="case-study-card animate-on-scroll animate-delay-2">
           <div class="case-img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWczE3AJFTMSXL9G-kFBPxlM7xa9JWyyDkQ&s" alt="The Rolling Penthouse" style="width:100%;object-fit:cover">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/2021-airstream-accessories-101-1620845203.jpg?crop=0.688xw:0.762xh;0.0625xw,0.238xh&resize=1200:*" alt="The Penthouse">
           </div>
           <div class="case-header">
             <span class="case-badge">Class A</span>
-            <h3 style="color:white;margin-top:8px">The Rolling Penthouse</h3>
+            <h3 style="color:white;margin-top:8px">The Penthouse</h3>
             <p style="color:rgba(255,255,255,0.6);font-size:0.875rem">40 ft Luxury Motorhome</p>
           </div>
           <div class="case-body">
@@ -331,7 +524,7 @@
         </article>
         <article class="case-study-card animate-on-scroll animate-delay-3">
           <div class="case-img">
-            <img src="https://shannonshipman.com/wp-content/uploads/2020/01/Airstream-Explosions-2-scaled.jpg" alt="The Minimalist" style="width:100%;object-fit:cover">
+            <img src="https://rvbusiness.com/wp-content/uploads/2024/04/CEM7471-scaled.jpg" alt="The Minimalist">
           </div>
           <div class="case-header">
             <span class="case-badge">Van Conversion</span>
@@ -362,28 +555,48 @@
       </div>
       <div class="grid grid-4">
         <div class="card animate-on-scroll animate-delay-1">
-          <img src="https://www.thespruce.com/thmb/ryBl4xRpYfc4GCGtWmKpCH-wXQg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/installing-hardwood-floor-170040982-582b748c5f9b58d5b17d0c58.jpg" alt="Hardwood Flooring" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
-          <div class="card-icon"><i class="ri-leaf-line"></i></div>
+          <img src="https://www.thespruce.com/thmb/ryBl4xRpYfc4GCGtWmKpCH-wXQg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/installing-hardwood-floor-170040982-582b748c5f9b58d5b17d0c58.jpg" alt="Hardwood Flooring">
           <h4>Hardwood</h4>
-          <p style="font-size:0.8rem">White oak, teak, bamboo — engineered for RV use.</p>
+          <p>Premium lightweight engineered hardwoods.</p>
+          <ul class="material-features">
+            <li><i class="ri-check-line"></i> <span>Ultra-Lightweight (Marine)</span></li>
+            <li><i class="ri-check-line"></i> <span>Moisture &amp; Humidity</span></li>
+            <li><i class="ri-check-line"></i> <span>Sustainable FSC Certified</span></li>
+          </ul>
+          <a href="services.html#materials" class="btn btn-secondary btn-sm btn-full">Explore Hardwoods</a>
         </div>
         <div class="card animate-on-scroll animate-delay-2">
-          <img src="https://www.airstream.com/wp-content/uploads/2022/02/Interstate-24GT-Leather-Countertops.jpg" alt="Stone & Quartz" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
-          <div class="card-icon"><i class="ri-stack-line"></i></div>
+          <img src="https://www.airstream.com/wp-content/uploads/2022/02/Interstate-24GT-Leather-Countertops.jpg" alt="Stone & Quartz">
           <h4>Stone &amp; Quartz</h4>
-          <p style="font-size:0.8rem">Custom-cut lightweight quartz and porcelain.</p>
+          <p>Bespoke stone and quartz surfaces.</p>
+          <ul class="material-features">
+            <li><i class="ri-check-line"></i> <span>Honeycomb (60% Weight)</span></li>
+            <li><i class="ri-check-line"></i> <span>Non-Porous &amp; Stain</span></li>
+            <li><i class="ri-check-line"></i> <span>Seamless Custom Mitered </span></li>
+          </ul>
+          <a href="services.html#materials" class="btn btn-secondary btn-sm btn-full">View Countertops</a>
         </div>
         <div class="card animate-on-scroll animate-delay-3">
-          <img src="https://www.ultimateairstreams.com/fckimages/pages/gourmet-cabinet/25FB%20International%20Gourmet%20Cabinet.jpg" alt="Custom Cabinetry" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
-          <div class="card-icon"><i class="ri-box-3-line"></i></div>
+          <img src="https://www.ultimateairstreams.com/fckimages/pages/gourmet-cabinet/25FB%20International%20Gourmet%20Cabinet.jpg" alt="Custom Cabinetry">
           <h4>Cabinetry</h4>
-          <p style="font-size:0.8rem">Handcrafted with marine-grade plywood.</p>
+          <p>Artisan-crafted space-saving cabinetry.</p>
+          <ul class="material-features">
+            <li><i class="ri-check-line"></i> <span>Premium Birch &amp; Bamboo</span></li>
+            <li><i class="ri-check-line"></i> <span>Travel-Lock Soft-Close</span></li>
+            <li><i class="ri-check-line"></i> <span>Integrated Smart Storage</span></li>
+          </ul>
+          <a href="services.html#interior" class="btn btn-secondary btn-sm btn-full">Customization</a>
         </div>
         <div class="card animate-on-scroll animate-delay-4">
-          <img src="https://www.airstream.com/wp-content/uploads/2025/06/airstream-frank-lloyd-wright-usonian-limited-edition-blog-bannerjpg.jpg" alt="Upholstery" style="width:100%;object-fit:cover;border-radius:8px;margin-bottom:12px">
-          <div class="card-icon"><i class="ri-scissors-cut-line"></i></div>
+          <img src="https://www.airstream.com/wp-content/uploads/2025/06/airstream-frank-lloyd-wright-usonian-limited-edition-blog-bannerjpg.jpg" alt="Upholstery">
           <h4>Upholstery</h4>
-          <p style="font-size:0.8rem">Performance fabrics and premium leathers.</p>
+          <p>High-performance luxury fabrics.</p>
+          <ul class="material-features">
+            <li><i class="ri-check-line"></i> <span>Pet-Friendly &amp; Stain</span></li>
+            <li><i class="ri-check-line"></i> <span>UV-Treated Fade-Proof</span></li>
+            <li><i class="ri-check-line"></i> <span>Breathable Ultra-Leather</span></li>
+          </ul>
+          <a href="services.html#interior" class="btn btn-secondary btn-sm btn-full">Select Upholstery</a>
         </div>
       </div>
     </div>
