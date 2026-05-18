@@ -571,7 +571,7 @@ p {
   text-align: center;
 }
 
-.mobile-nav .nav-link:last-child {
+.mobile-nav .nav-link:last-of-type {
   border-bottom: none;
 }
 
@@ -628,11 +628,10 @@ p {
 
 .hero-bg {
   position: absolute;
-  inset: 0;
-  background-size: 100% 100%;
+  inset: -20px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: transform 0.5s ease;
 }
 
 .hero-bg::after {
@@ -894,23 +893,34 @@ p {
 }
 
 .before-after-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   position: relative;
-  aspect-ratio: 16/10;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.before-after-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
 }
 
 .ba-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
+  aspect-ratio: 16/10;
+  width: 100%;
 }
 
 .ba-side {
   position: relative;
   flex: 1;
-  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -973,8 +983,7 @@ p {
 .ba-info {
   padding: var(--space-2) var(--space-3);
   background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-top: none;
+  border: none;
   text-align: center;
 }
 

@@ -150,11 +150,7 @@
 
         <!-- Right: Tabbed Forms -->
         <div class="contact-form-card animate-on-scroll animate-delay-2">
-          <div class="tabs" role="tablist" aria-label="Contact options">
-            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="contact">Send a Message</button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="booking">Book Consultation</button>
-            <button class="tab-btn" role="tab" aria-selected="false" data-tab="quote">Get a Quote</button>
-          </div>
+          
 
           <!-- Contact Form -->
           <!-- Formspree / Netlify compatible: add action="https://formspree.io/f/YOUR_ID" -->
@@ -242,92 +238,10 @@
           </div>
 
           <!-- Booking Form -->
-          <div class="tab-panel" id="tab-booking" role="tabpanel">
-            <h3 style="margin-bottom:var(--space-1); text-align: center;">Book a Free Consultation</h3>
-            <p style="font-size:0.875rem;margin-bottom:var(--space-3); text-align: center;">60 minutes with our design team — in person or virtual. No commitment required.</p>
-            <!-- Calendar booking integration placeholder -->
-            <div style="background:var(--bg-secondary);border:2px dashed var(--border-color);border-radius:var(--border-radius-lg);padding:var(--space-4);text-align:center;margin-bottom:var(--space-3)">
-              <i class="ri-calendar-schedule-line" style="font-size:2.5rem;color:var(--color-accent);display:block;margin-bottom:8px"></i>
-              <p style="font-weight:600;font-size:0.9rem;margin-bottom:4px">Calendar Booking Widget</p>
-              <p style="font-size:0.8rem;color:var(--text-light)">Connect Calendly, Cal.com, or your own booking system here</p>
-            </div>
-            <form id="booking-form" data-validate novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="b-name">Full Name <span style="color:#e74c3c">*</span></label>
-                  <input type="text" id="b-name" class="form-control" placeholder="" data-rules="required" required />
-                  <span class="form-error" role="alert"></span>
-                </div>
-                <div class="form-group">
-                  <label for="b-email">Email <span style="color:#e74c3c">*</span></label>
-                  <input type="email" id="b-email" class="form-control" placeholder="" data-rules="required,email" required />
-                  <span class="form-error" role="alert"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="b-date">Preferred Date</label>
-                <input type="date" id="b-date" class="form-control" />
-              </div>
-              <div class="form-group">
-                <label for="b-type">Consultation Type</label>
-                <select id="b-type" class="form-control">
-                  <option>In-Person (Austin, TX)</option>
-                  <option>Video Call (Zoom)</option>
-                  <option>Phone Call</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="b-rv">Your RV Details</label>
-                <input type="text" id="b-rv" class="form-control" placeholder="e.g. 1972 Airstream Sovereign 28ft" />
-              </div>
-              <button type="submit" class="btn btn-primary btn-full"><i class="ri-calendar-check-line"></i> Confirm Booking</button>
-            </form>
-          </div>
+          
 
           <!-- Quote Form -->
-          <div class="tab-panel" id="tab-quote" role="tabpanel">
-            <h3 style="margin-bottom:var(--space-3); text-align: center;">Request a Detailed Quote</h3>
-            <form data-validate novalidate>
-              <div class="form-group">
-                <label for="q-name">Full Name <span style="color:#e74c3c">*</span></label>
-                <input type="text" id="q-name" class="form-control" placeholder="" data-rules="required" required />
-                <span class="form-error" role="alert"></span>
-              </div>
-              <div class="form-group">
-                <label for="q-email">Email <span style="color:#e74c3c">*</span></label>
-                <input type="email" id="q-email" class="form-control" placeholder="" data-rules="required,email" required />
-                <span class="form-error" role="alert"></span>
-              </div>
-              <div class="form-group">
-                <label for="q-rv">RV Make, Model & Year <span style="color:#e74c3c">*</span></label>
-                <input type="text" id="q-rv" class="form-control" placeholder="e.g. 2005 Airstream International 25ft" data-rules="required" required />
-                <span class="form-error" role="alert"></span>
-              </div>
-              <div class="form-group">
-                <label for="q-budget">Approximate Budget</label>
-                <select id="q-budget" class="form-control">
-                  <option>Under $10,000</option>
-                  <option>$10,000 – $25,000</option>
-                  <option>$25,000 – $50,000</option>
-                  <option>$50,000 – $100,000</option>
-                  <option>$100,000+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="q-scope">Project Scope</label>
-                <textarea id="q-scope" class="form-control" placeholder="Describe what you want to renovate or change..." style="min-height:100px"></textarea>
-              </div>
-              <div class="form-group">
-                <label>Upload Current Photos</label>
-                <div class="file-upload" role="button" tabindex="0">
-                  <i class="ri-image-add-line" style="font-size:1.8rem;color:var(--color-accent);display:block;margin-bottom:6px"></i>
-                  <p class="file-label" style="margin:0;font-size:0.875rem;font-weight:600">Click to upload photos</p>
-                  <input type="file" style="display:none" accept="image/*" multiple aria-hidden="true" />
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full"><i class="ri-price-tag-3-line"></i> Request Quote</button>
-            </form>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -429,7 +343,7 @@
         <div class="footer-links">
           <a href="tel:+18007837326"><i class="ri-phone-line" aria-hidden="true"></i> 1-800-RV-DREAM</a>
           <a href="mailto:hello@airstreamrv.com"><i class="ri-mail-line" aria-hidden="true"></i> hello@airstreamrv.com</a>
-          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way, Austin TX</a>
+          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way, Austin</a>
           <a href="#"><i class="ri-time-line" aria-hidden="true"></i> Mon–Fri: 8am – 6pm CST</a>
         </div>
       </div>
