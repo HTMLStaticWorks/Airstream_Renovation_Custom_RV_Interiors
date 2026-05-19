@@ -557,14 +557,4 @@ document.addEventListener('DOMContentLoaded', () => {
   AccordionManager.init();
 
   // Page specific inits
-  if (document.querySelector('.hero')) {
-    // Parallax light
-    document.addEventListener('mousemove', (e) => {
-      const hero = document.querySelector('.hero-bg');
-      if (!hero) return;
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 10;
-      hero.style.transform = `translate(${x}px, ${y}px)`;
-    });
-  }
 });

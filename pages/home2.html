@@ -284,11 +284,14 @@
     .features-alt .section-header p {
       color: var(--text-secondary) !important;
     }
-    @media (max-width: 768px) {
-      .hero {
-        padding-top: calc(var(--header-height) + 60px) !important;
-        min-height: auto !important;
-        padding-bottom: 60px;
+    @media (max-width: 480px) {
+      /* Compact hero stats — 2 columns to reduce height */
+      .hero .hero-stats,
+      .hero [class*="stat"] {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-2) !important;
+        flex-wrap: unset !important;
       }
     }
   </style>
@@ -368,20 +371,7 @@
           <a href="contact.html" class="btn btn-primary btn-lg">Start Your Build</a>
           <a href="services.html" class="btn btn-light btn-lg">View Services</a>
         </div>
-        <div class="hero-stats" style="margin-top:var(--space-6)">
-          <div class="stat-item">
-            <span class="stat-value">250+</span>
-            <span class="stat-label">Builds Completed</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">12</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">100%</span>
-            <span class="stat-label">Client Satisfaction</span>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -661,8 +651,8 @@
         <div class="footer-links">
           <a href="tel:+18007837326"><i class="ri-phone-line" aria-hidden="true"></i> 1-800-RV-DREAM</a>
           <a href="mailto:hello@airstreamrv.com"><i class="ri-mail-line" aria-hidden="true"></i> hello@airstreamrv.com</a>
-          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way, Austin</a>
-          <a href="#"><i class="ri-time-line" aria-hidden="true"></i> Mon–Fri: 8am – 6pm CST</a>
+          <a href="#"><i class="ri-map-pin-line" aria-hidden="true"></i> 123 Renovation Way</a>
+          <a href="#"><i class="ri-time-line" aria-hidden="true"></i> Mon–Fri: 8am – 6pm</a>
         </div>
       </div>
     </div>
